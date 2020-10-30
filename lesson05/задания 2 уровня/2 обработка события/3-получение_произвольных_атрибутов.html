@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal fade" 
+         id="exampleModal" 
+         tabindex="-1" 
+         aria-labelledby="exampleModalLabel" 
+         aria-hidden="true">Нажать
+    </div>
+
+    <!-- 
+    Задание.
+    1. Сохраните ссылку на div в переменную
+    2. Назначьте div'у обработку клика, у функции-обработчика объявите параметр event.
+    3. При клике из event.target c помощью getAttribute() получите значение
+    каждого атрибута и выведите в консоль.
+    -->
+
+    <!--
+    Скорее всего я туплю жестко, но я не понял задание, див в задании пустой, кликнуть на него невозможно.
+    Нужно было создать ссылку или кнопку которая ведет на него и добавить её на страницу? Тут только сохранение ссылки на див в переменную.
+    Как вывести с помощью getAttribute() значение каждого атрибута не зная имени заранее?
+    Я скорее всего туплю, сделал вот так, полный вывод всего при нажатии на текст дива, который сам добавил.
+    Скорее всего сделал неверно из-за непонимания задачи.
+    -->
+    <script>
+        'use strict';
+        let x = document.querySelector("div");
+        x.addEventListener('click', function (event){
+            let y = event.target;
+            for (let i = 0; i < y.attributes.length; i++) {
+                console.log('Имя атрибута: ' + y.getAttributeNames()[i] + '   Значение атрибута: ' + y.getAttribute(y.getAttributeNames()[i]));
+            }
+        })
+    </script>
+</body>
+</html>
