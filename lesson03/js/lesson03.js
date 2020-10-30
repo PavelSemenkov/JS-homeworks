@@ -4,19 +4,15 @@ let money = prompt("Введите размер вклада: ");
 let x = money.charAt(money.length - 1);
 switch (x) {
     case "1":
-        alert("Ваш вклад: " + money + " рубль.");
+        alert(`Ваш вклад: ${money} рубль.`);
         break;
     case "2":
-        alert("Ваш вклад: " + money + " рубля.");
-        break;
     case "3":
-        alert("Ваш вклад: " + money + " рубля.");
-        break;
     case "4":
-        alert("Ваш вклад: " + money + " рубля.");
+        alert(`Ваш вклад: ${money} рубля.`);
         break;
     default:
-        alert("Ваш вклад: " + money + " рублей.");
+        alert(`Ваш вклад: ${money} рублей.`);
         break;
 }
 
@@ -54,7 +50,7 @@ const post = {
             }
         },
     ]
-}
+};
 
 
 console.log(post.author);
@@ -78,8 +74,8 @@ const products = [
 ];
 
 products.forEach((i) => {
-    i.price = (i.price/100)*85
-})
+    i.price = (i.price/100)*85;
+});
 
 console.log(products);
 
@@ -111,8 +107,7 @@ const products1 = [
     },
 ];
 
-
-console.log((products1.filter(i => i.photos)).sort(function (a, b){return a.price - b.price;}))
+console.log((products1.filter(i => i.photos)).sort(function (a, b){return a.price - b.price;}));
 
 for (let i = 0; i <= 9; console.log(i++)){}
 
